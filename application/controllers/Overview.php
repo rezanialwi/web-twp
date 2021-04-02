@@ -33,8 +33,8 @@ class Overview extends CI_Controller {
 			$absenc = 'SELECT COUNT(*) AS hasil FROM absensi_calang';
 			$data['absensi_calang'] = $this->db->query($absenc)->row_array();
 
-			$admin = 'SELECT COUNT(*) AS hasil FROM admin';
-			$data['admin'] = $this->db->query($admin)->row_array();
+			$tiket = 'SELECT COUNT(*) AS hasil FROM tiket';
+			$data['tiket'] = $this->db->query($tiket)->row_array();
 
             $artikel = 'SELECT COUNT(*) AS hasil FROM artikel';
 			$data['artikel'] = $this->db->query($artikel)->row_array();

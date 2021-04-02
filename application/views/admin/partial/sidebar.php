@@ -100,6 +100,12 @@
           <span>Kontak</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('tiket_admin') ?>">
+          <i class="fas fa-fw fa-bullhorn"></i>
+          <span>Tiket</span></a>
+      </li>
+
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
