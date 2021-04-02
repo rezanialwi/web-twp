@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: sql209.epizy.com
--- Generation Time: Mar 07, 2021 at 05:56 AM
--- Server version: 5.6.48-88.0
--- PHP Version: 7.2.22
+-- Host: 127.0.0.1
+-- Generation Time: Apr 02, 2021 at 10:38 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `epiz_26399471_db_twp`
+-- Database: `twp2021`
 --
 
 -- --------------------------------------------------------
@@ -32,7 +31,7 @@ CREATE TABLE `absensi_calang` (
   `id_absensi` int(11) NOT NULL,
   `nama_calang` varchar(50) NOT NULL,
   `id_proker` int(11) NOT NULL,
-  `jam` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `jam` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `keterangan` varchar(12) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -57,7 +56,7 @@ CREATE TABLE `absensi_pengurus` (
   `id_absensi` int(12) NOT NULL,
   `nama_pengurus` varchar(50) NOT NULL,
   `id_proker` int(10) NOT NULL,
-  `jam` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `jam` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `keterangan` varchar(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -309,6 +308,31 @@ INSERT INTO `tb_pendaftaran` (`nim`, `nm_pendaftar`, `jurusan`, `prodi`, `tmp_la
 ('E020320140', 'Mukhairah Marda', 'Bisnis', 'Manajemen Informatika', 'Kampung Baru', '2002-10-17', 'Jl.Gawe sabumi II', '082149461817', 'Islam', 'perempuan', '1. PMR WIRA SMANSA\r\n2. SSK (Sekolah Siaga Kependudukan)\r\n3. Mading jurnal\r\n\r\n', '1.praktik drama\r\n2.praktik tari\r\n3.praktik cerpen', 'Aktor (Karena saya ingin mempelajari serta memperdalam pengetahuan dn bakat dalam seni peran)', '18092020054237inbound4644708873709552003.jpg'),
 ('E020320109', 'MUHAMMAD RIZAL', 'Bisnis', 'MANAJEMIN INFORMATIKA ', 'RUTAS', '1999-08-08', 'DESA KAYU BAWANG ', '087814883840', 'Islam', 'laki-laki', ' Belum pernah', 'Belum pernah', 'Ingin mengenal ilmu seni peran', '190920201002246A9D855B-E3AB-484F-9D54-54A632D43841.jpeg');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tiket`
+--
+
+CREATE TABLE `tiket` (
+  `id_tiket` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `asal` varchar(255) NOT NULL,
+  `telp` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `ket` enum('Tidak Hadir','Hadir','','') NOT NULL,
+  `tanggal` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tiket`
+--
+
+INSERT INTO `tiket` (`id_tiket`, `nama`, `alamat`, `asal`, `telp`, `email`, `ket`, `tanggal`) VALUES
+(6, 'Rezani', 'Cendana', 'Poliban', '0897292', 'rezani@gmail.com', 'Hadir', '2021-04-02 02:26:21'),
+(13, 'Agus Ariadi', 'Barabai', 'Poliban', '0993832', 'ee@gmail.com', 'Tidak Hadir', '2021-04-02 08:21:57');
+
 --
 -- Indexes for dumped tables
 --
@@ -369,6 +393,12 @@ ALTER TABLE `tb_pendaftaran`
   ADD KEY `nim` (`nim`);
 
 --
+-- Indexes for table `tiket`
+--
+ALTER TABLE `tiket`
+  ADD PRIMARY KEY (`id_tiket`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -419,6 +449,12 @@ ALTER TABLE `pengurus`
 --
 ALTER TABLE `proker`
   MODIFY `id_proker` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `tiket`
+--
+ALTER TABLE `tiket`
+  MODIFY `id_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
