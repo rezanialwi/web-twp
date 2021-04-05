@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2021 at 10:38 AM
+-- Generation Time: Apr 05, 2021 at 06:23 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -163,6 +163,48 @@ CREATE TABLE `artikel` (
 
 INSERT INTO `artikel` (`artikel_id`, `artikel_tanggal`, `artikel_judul`, `artikel_slug`, `artikel_konten`, `artikel_sampul`, `artikel_kategori`, `artikel_status`) VALUES
 (18, '2020-12-22 19:05:25', 'ANNIVERSARY TEATER WASI PUTIH KE-XXI', 'anniversary-teater-wasi-putih-ke-xxi', '<h1>ANNIVERSARY TEATER WASI PUTIH KE-XXI</h1>\r\n\r\n<h3 style=\"text-align:justify\"><span style=\"font-family:Times New Roman,Times,serif\"><span style=\"font-size:16px\">Sabtu, 5 Desember 2020 bertempat di Ruang Multimedia Politeknik Negeri Banjarmasin, Teater Wasi Putih menggelar acara syukuran bertepatan dengan 21 tahun usianya.</span></span></h3>\r\n\r\n<h3 style=\"text-align:justify\"><span style=\"font-family:Times New Roman,Times,serif\"><span style=\"font-size:16px\">Acara ini bermaksud untuk memupuk kembali rasa kekeluargaan dalam semangat kebersamaan. Acara ini dihadiri oleh Pembina, Pengurus, Calon Anggota dan Dewan Penasehat Organisasi Teater. Acara ini berjalan dengan hikmat dan meriah dengan rangkaian penampilan - Penampilan dari pengurus dan calon anggota. Meski dengan waktu latihan yang terbilang singkat, penampilan ini menjadi bukti bahwa pandemi bukanlah suatu penghalang untuk tetap berkarya dan berproses.<br />\r\n&quot; Setiap angkatan, setiap periode memiliki kisahnya masing-masing dan angkatan ini suatu hari akan dengan bangganya bisa berkata, &quot;Kami dulu menghadapi masa pandemi yang menghantam hampir seluruh hal di seluruh dunia, dan kami bisa bertahan.&quot; Sambutan Ibu Nailiya Nikmah selaku Pembina Teater Wasi Putih sekaligus membuka rangkaian acara.&nbsp;<br />\r\nAcara&nbsp; ini menyongsong konsep reuni Keluarga Besar Teater Wasi Putih. Konsep ini tercipta karena adanya rasa bertemu dan berkumpul tetapi tidak terhalang karena adanya pandemi covid-19. Oleh karena itu pengurus menciptakan ruang temu sekaligus merayakan hari jadi Teater Wasi Putih dengan protokol kesehatan yang ketat.<br />\r\nKami sangat berterimakasih kepada Direktur Poliban, Wakil Direktur III, dan Satgas Covid yang sudah mengijinkan sehingga terlaksananya acara ini. &quot; Saya bangga dan bahagia masih bisa berada dan berdiri di TWP.<br />\r\nSelamat ulang tahun TWP, tahun ini kita semua membuktikan bahwa kita bisa survive dalam kondisi apapun.</span></span></h3>\r\n', 'AnyConv_com__IMG_4050-min_(1).jpg', 5, 'publish');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fkpsk`
+--
+
+CREATE TABLE `fkpsk` (
+  `id_fkpsk` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `jumlah` int(11) NOT NULL,
+  `ket` enum('Tidak Hadir','Hadir') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `fkpsk`
+--
+
+INSERT INTO `fkpsk` (`id_fkpsk`, `nama`, `jumlah`, `ket`) VALUES
+(1, ' Kampoeng Seni Boedaja (KSB)', 1, 'Tidak Hadir'),
+(3, 'Himasindo', 0, 'Tidak Hadir'),
+(4, 'Sanggar Seni Demokrat (SSD)', 1, 'Tidak Hadir'),
+(5, 'Artpedia', 0, ''),
+(6, 'Wiramartas', 0, ''),
+(7, 'Sanggar Talas', 0, ''),
+(8, 'Sanggar Dolphin', 0, ''),
+(9, 'Lentera Sendratasik', 0, ''),
+(10, 'Ilalang', 0, ''),
+(11, 'Enigma', 0, ''),
+(12, 'Sanggar Bahana', 0, ''),
+(13, 'Teater Awan', 0, ''),
+(14, 'Sanggar Legenda', 0, ''),
+(15, 'Kereta', 0, ''),
+(16, 'Stasiun Seni', 0, ''),
+(17, 'Tasmaq', 0, ''),
+(18, 'STB UNISKA', 0, ''),
+(19, 'Dapur Teater', 0, ''),
+(20, 'Ar-Rumi', 0, ''),
+(21, 'Buncu Teater', 0, ''),
+(22, 'Seni Rupaidah', 0, ''),
+(23, 'Laga Banua', 0, ''),
+(24, 'Seni Mata Air Banjarbaru', 0, '');
 
 -- --------------------------------------------------------
 
@@ -330,8 +372,14 @@ CREATE TABLE `tiket` (
 --
 
 INSERT INTO `tiket` (`id_tiket`, `nama`, `alamat`, `asal`, `telp`, `email`, `ket`, `tanggal`) VALUES
-(6, 'Rezani', 'Cendana', 'Poliban', '0897292', 'rezani@gmail.com', 'Hadir', '2021-04-02 02:26:21'),
-(13, 'Agus Ariadi', 'Barabai', 'Poliban', '0993832', 'ee@gmail.com', 'Tidak Hadir', '2021-04-02 08:21:57');
+(1, 'Reza', 'Cendana', 'Poliban', '0893832', 'reza@gmail.com', 'Hadir', '2021-04-02 13:59:28'),
+(2, 'Udin', 'Handil', 'UNISKA', '09039292', 'gshsh@gmail.com', 'Tidak Hadir', '2021-04-02 13:24:58'),
+(3, 'anju', 'cendana', 'politala', '028112', 'ass@gmail.com', 'Tidak Hadir', '2021-04-02 21:53:03'),
+(4, 'tes', 'tes', 'tes', '34423', 'res@ggf', 'Tidak Hadir', '2021-04-03 03:18:37'),
+(5, 'tes', 'tes', 'tes', '08291', 'sad@sadsa', 'Tidak Hadir', '2021-04-03 04:38:10'),
+(6, 'tes', 'tes', 'tes', '08291', 'sad@sadsa', 'Tidak Hadir', '2021-04-03 04:39:17'),
+(7, 'tes', 'tes', 'tes', '08291', 'sad@sadsa', 'Tidak Hadir', '2021-04-03 04:39:33'),
+(8, 'tes', 'tes', 'tes', '08291', 'sad@sadsa', 'Tidak Hadir', '2021-04-03 04:40:35');
 
 --
 -- Indexes for dumped tables
@@ -360,6 +408,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `artikel`
   ADD PRIMARY KEY (`artikel_id`);
+
+--
+-- Indexes for table `fkpsk`
+--
+ALTER TABLE `fkpsk`
+  ADD PRIMARY KEY (`id_fkpsk`);
 
 --
 -- Indexes for table `kategori`
@@ -427,6 +481,12 @@ ALTER TABLE `artikel`
   MODIFY `artikel_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT for table `fkpsk`
+--
+ALTER TABLE `fkpsk`
+  MODIFY `id_fkpsk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
@@ -454,7 +514,7 @@ ALTER TABLE `proker`
 -- AUTO_INCREMENT for table `tiket`
 --
 ALTER TABLE `tiket`
-  MODIFY `id_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

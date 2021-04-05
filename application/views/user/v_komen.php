@@ -70,7 +70,7 @@ input[type=submit]:hover {
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <div class="hero-cap hero-cap2 text-center">
-                                                <h2>About Us</h2>
+                                                <h2>Contact Us</h2>
                                             </div>
                                         </div>
                                     </div>

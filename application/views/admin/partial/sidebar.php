@@ -106,6 +106,12 @@
           <span>Tiket</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo site_url('fkpsk') ?>">
+          <i class="fas fa-fw fa-envelope"></i>
+          <span> Undangan / FKPSK</span></a>
+      </li>
+
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">

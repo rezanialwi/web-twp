@@ -39,6 +39,12 @@ class Overview extends CI_Controller {
             $artikel = 'SELECT COUNT(*) AS hasil FROM artikel';
 			$data['artikel'] = $this->db->query($artikel)->row_array();
 
+            $fkpsk = 'SELECT COUNT(*) AS hasil FROM fkpsk';
+			$data['fkpsk'] = $this->db->query($fkpsk)->row_array();
+
+            $admin = 'SELECT COUNT(*) AS hasil FROM admin';
+			$data['admin'] = $this->db->query($admin)->row_array();
+
         $this->load->view('admin/v_overview',$data);
 	}
 }
