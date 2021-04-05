@@ -14,6 +14,7 @@
         <!--? slider Area Start-->
         <div class="slider-area ">
             <div class="slider-active">
+                
                 <!-- Single Slider -->
                 <div class="single-slider slider-height d-flex align-items-center">
                     <div class="container">
@@ -24,8 +25,8 @@
                                     <h1 data-animation="fadeInUp" data-delay=".6s">Welcome To Website</h1>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn">
-                                        <a href="<?php echo site_url('about') ?>" class="btn hero-btn" data-animation="fadeInLeft"
-                                            data-delay=".8s">Lihat Sekarang</a>
+                                        <a href="<?php echo site_url('tiket') ?>" class="btn hero-btn" data-animation="fadeInLeft"
+                                            data-delay=".8s">Daftar Sekarang Sebagai Penonton</a>
                                     </div>
                                 </div>
                             </div>
@@ -45,6 +46,58 @@
             </div>
         </div>
         <!-- slider Area End-->
+         <!--? Blog Ara Start -->
+    <section class="home-blog-area section-padding30">
+        <div class="container">
+        <h1 class=" text-center">~PEMENTASAN YANG DIADAKAN SAAT INI~</h1>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="<?php echo base_url(); ?>assets2/img/gallery/bpro.jpg" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="services.html">Badan Produksi</a></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="<?php echo base_url(); ?>assets2/img/gallery/pamflet.jpg" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="services.html">Studi Pentas Calon Anggota Teater Wasi Putih angkatan XXI!!</a></h3>
+                            <p>Dengan mempersembahkan sebuah naskah berjudul 
+" AA II UU " <br>
+Karya : Arifin C Noer <br>
+Sutradara : M. Robith Ribbiyun. <br>
+Ass Sutradara : Helmia N.
+
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-team mb-30">
+                        <div class="team-img">
+                            <img src="<?php echo base_url(); ?>assets2/img/gallery/actor.jpg" alt="">
+                        </div>
+                        <div class="team-caption">
+                            <h3><a href="services.html">Para Pemain</a></h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-danger">* Buruan daftar sebelum kuotanya penuh, daftar di Link ini : 
+                <a href="<?php echo site_url('tiket') ?>" ><u><i> Daftar Penonton</i></u></a> --
+                <a href="<?php echo site_url('tiket/denah') ?>" ><u><i>LIhat Denah Pementasan  </i></u></a> --
+                <a href="#maps" ><u><i>LIhat G-Maps Pementasan  </i></u></a></p>
+
+        </div>
+    </section>
         <!--? About Area start -->
 
 

@@ -13,6 +13,10 @@
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
                                         <p class="info1">UKM Teater Wasi Putih Politeknik Negeri Banjarmasin</p>
+                                        <section id="maps">
+                                            <h4>~ Lokasi Pementasan AA II UU ~</h4>
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.0238186410706!2d114.58348031475789!3d-3.3442714975655305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4216e6e4f8d47%3A0x5aae564f013261ed!2sKantor%20Kecamatan%20Banjarmasin%20Selatan!5e0!3m2!1sid!2sid!4v1617521624189!5m2!1sid!2sid" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                            </section>
                                     </div>
                                 </div>
                             </div>

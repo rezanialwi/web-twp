@@ -77,7 +77,7 @@ echo "<a href='#' class='btn btn-danger btn-icon-split'>
 </td>
 			<td>
           
-                  </a>
+                  </a>                
                   <a href="<?php echo base_url().'tiket_admin/edit/'.$u->id_tiket; ?>" class="btn btn-success btn-sm" > <i
 class="fa fa-plus"></i> </a>
 <a href="<?php echo base_url().'tiket_admin/hapus/'.$u->id_tiket; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin Hapus Data <?php echo $u->nama ?> ?');"> <i

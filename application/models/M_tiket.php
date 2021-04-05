@@ -6,6 +6,7 @@ class M_tiket extends CI_Model{
 		// $this->db->join('pegawai', 'pegawai.id_pegawai = peminjaman.id_pegawai', 'left');
 		$this->db->select('*');
 		$this->db->from('tiket');
+		$this->db->like('id_tiket',$keyword);
 		$this->db->like('nama',$keyword);
 		$this->db->or_like('alamat',$keyword);
 		$this->db->or_like('asal',$keyword);

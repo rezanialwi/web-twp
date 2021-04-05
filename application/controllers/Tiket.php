@@ -9,7 +9,10 @@ class Tiket extends CI_Controller{
 	}
 
 	function index(){
-		$this->load->view('user/v_tiket');
+		$data['data'] = $this->M_tiket->tampil_data()->result();
+		$tiket = 'SELECT COUNT(*) AS hasil FROM tiket';
+		$data['tiket'] = $this->db->query($tiket)->row_array();
+		$this->load->view('user/v_tiket', $data);
 	}
 
 	function proses(){
@@ -29,7 +32,7 @@ class Tiket extends CI_Controller{
             'ket' => $ket
 			);
 		$this->M_tiket->input_data($data,'tiket');
-		redirect('tiket/alert');
+		$this->load->view('user/v_alert_tiket',$data);
     }
 
 	function cetak_persatu($id_tiket){
@@ -39,8 +42,11 @@ class Tiket extends CI_Controller{
 	 }
 
 	 function alert(){
-		
+	 
 		$this->load->view('user/v_alert_tiket');
+	 }
+	 function denah(){
+		$this->load->view('user/v_denah');
 	 }
 	 
 }
