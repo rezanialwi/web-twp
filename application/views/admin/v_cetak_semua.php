@@ -85,7 +85,7 @@
 		<tr>
        <td>Foto</td> 
        <td>:</td>
-      <td><img src="<?php echo base_url(); ?>uploads/<?php echo $u->foto ?>" width='100' height='100' class='img-thumbnail'>
+      <td><img src="<?php echo base_url(); ?>uploads/calang/<?php echo $u->foto ?>" width='100' height='100' class='img-thumbnail'>
         </tr>
 		</table>
         </section>

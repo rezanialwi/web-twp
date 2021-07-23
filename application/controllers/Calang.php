@@ -34,7 +34,7 @@ class Calang extends CI_Controller {
       $minat = $this->input->post('minat');
 
       // get foto
-      $config['upload_path'] = './uploads';
+      $config['upload_path'] = './uploads/calang';
       $config['allowed_types'] = 'jpg|png|jpeg|gif';
       $config['max_size'] = '2048';  //2MB max
       $config['max_width'] = '4480'; // pixel
@@ -134,7 +134,7 @@ class Calang extends CI_Controller {
             $_nim = $this->db->get_where('tb_pendaftaran',['nim' => $nim])->row();
             $query = $this->db->delete('tb_pendaftaran',['nim'=>$nim]);
             if($query){
-                unlink("uploads/".$_nim->foto);
+                unlink("uploads/calang".$_nim->foto);
             }
             redirect('calang');
 		}
@@ -170,7 +170,7 @@ class Calang extends CI_Controller {
       $kondisi = array('nim' => $nim );
 
       // get foto
-      $config['upload_path'] = './uploads';
+      $config['upload_path'] = './uploads/calang';
       $config['allowed_types'] = 'jpg|png|jpeg|gif';
       $config['max_size'] = '2048';  //2MB max
       $config['max_width'] = '4480'; // pixel

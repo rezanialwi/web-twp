@@ -49,7 +49,7 @@
 			<td><?php echo $data->nim ?></td>
 			<td><?php echo $data->nm_pendaftar ?></td>
 			<td><?php echo $data->minat ?></td>
-            <td><img width="50" src="<?php echo base_url(); ?>uploads/<?php echo $data->foto ?>"></td>
+            <td><img width="50" src="<?php echo base_url(); ?>uploads/calang/<?php echo $data->foto ?>"></td>
 			<td>
           
                   </a>

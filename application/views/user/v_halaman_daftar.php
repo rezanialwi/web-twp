@@ -34,7 +34,8 @@
                 <li class="list-group-item text-center"><b><i>Pendaftaran ditutup</i></b></li>
                  <li class="list-group-item text-center">Terima Kasih</li>
                 <!-- <h4 class="pertama">Absensi Pengurus :</h4>
-                <a href="<?php echo site_url('absen_p') ?>" role="button"  class="btn btn-primary btn-lg btn-block">Absensi Pengurus</a> -->
+                <a href="<?php echo site_url('absen_p') ?>" role="button"  class="btn btn-primary btn-lg btn-block">Absensi Pengurus</a> --> 
+                <a href="<?php echo site_url('halaman_daftar/daftar_calang') ?>" role="button"  class="btn btn-primary btn-lg btn-block">Daftar Calang Sekarang</a>
                  <!-- <h4 class="pertama">Absensi Calang :</h4>
                 <a href="<?php echo site_url('absen_c') ?>" role="button"  class="btn btn-primary btn-lg btn-block">Absensi Calang</a> -->
                 <!-- <a href="minat1" role="button"  class="btn btn-primary btn-lg btn-block">Update Formulir</a> -->
